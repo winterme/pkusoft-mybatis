@@ -97,6 +97,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/backstage/css/**", "anon");
         filterChainDefinitionMap.put("/backstage/js/**", "anon");
         filterChainDefinitionMap.put("/backstage/images/**", "anon");
+        filterChainDefinitionMap.put("/licm/getMsgByPage2/**", "anon");
         filterChainDefinitionMap.put("/login", "anon");
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
         filterChainDefinitionMap.put("/logout", "logout");

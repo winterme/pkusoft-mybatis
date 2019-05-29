@@ -75,7 +75,7 @@ public class MyRealm extends AuthorizingRealm {
             throw new LockedAccountException();
         }
 
-        if( username.equals( user.getUsername() ) && password.equals( user.getPassword() ) ){
+        if( password.equalsIgnoreCase( user.getPassword() ) && password.equalsIgnoreCase( user.getPassword() ) ){
             // 获取所有session
             Collection<Session> sessions = sessionDAO.getActiveSessions();
             for (Session session: sessions) {

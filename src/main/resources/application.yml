@@ -27,24 +27,27 @@ mybatis:
     config[0]:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://23.95.189.109:5566/zhangzq?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://127.0.0.1:3306/zhangzq?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
       username: root
-      password: pkus0ftadm1n
+      password: xxx
       mapper-scanner: tk.mybatis.spring.mapper.MapperScannerConfigurer
-      base-package: com.zzq.usercenter
+      base-package: com.zzq.zhangzq.mapper
+      mapper-location: classpath:com/zzq/zhangzq/mapper/*.xml
     config[1]:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://23.95.189.109:5566/licm?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://127.0.0.1:3306/licm?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
       username: root
-      password: pkus0ftadm1n
+      password: xxx
       mapper-scanner: tk.mybatis.spring.mapper.MapperScannerConfigurer
-      base-package: com.zzq.licm
+      base-package: com.zzq.licm.mapper
+      mapper-location: classpath:com/zzq/licm/mapper/*.xml
     config[2]:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://23.95.189.109:5566/user_center?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://127.0.0.1:3306/user_center?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Hongkong&zeroDateTimeBehavior=convertToNull
       username: root
-      password: pkus0ftadm1n
+      password: xxx
       mapper-scanner: tk.mybatis.spring.mapper.MapperScannerConfigurer
-      base-package: com.zzq.zhangzq
+      base-package: com.zzq.usercenter.mapper
+      mapper-location: classpath:com/zzq/usercenter/mapper/*.xml

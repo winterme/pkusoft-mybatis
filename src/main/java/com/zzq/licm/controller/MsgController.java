@@ -93,4 +93,17 @@ public class MsgController {
         }
     }
 
+    @RequestMapping("/licm/getMsgByPage2/{start}/{size}")
+    @ResponseBody
+    public JsonResult getMsgById2(@PathVariable("start")int start,@PathVariable("size")int size){
+        try {
+            Map<String , Object> result = msgService.selectListMsgByPage(start,size);
+            return new JsonResult(true, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("查询失败！");
+            return new JsonResult(false,"");
+        }
+    }
+
 }

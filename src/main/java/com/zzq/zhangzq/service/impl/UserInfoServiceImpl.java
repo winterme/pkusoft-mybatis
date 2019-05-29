@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.UUID;
 
 @Service
-@Transactional(value = "baseTransationManager")
+@Transactional(value = "transactionManager1")
 public class UserInfoServiceImpl implements UserInfoService {
 
     @Autowired

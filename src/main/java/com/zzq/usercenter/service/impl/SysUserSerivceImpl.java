@@ -9,12 +9,14 @@ import com.zzq.usercenter.po.SysUser;
 import com.zzq.usercenter.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional("transactionManager2")
 public class SysUserSerivceImpl implements SysUserService {
 
     @Autowired

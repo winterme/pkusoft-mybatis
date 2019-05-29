@@ -7,6 +7,7 @@ import com.zzq.licm.mapper.MsgMapper;
 import com.zzq.licm.po.Msg;
 import com.zzq.licm.service.MsgService;
 import org.apache.ibatis.session.RowBounds;
+import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +19,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-@Transactional(value = "licmTransation")
+@Transactional(value = "transactionManager1")
 public class MsgServiceImpl implements MsgService {
 
     @Autowired
@@ -28,12 +29,12 @@ public class MsgServiceImpl implements MsgService {
     public int insertSelective(Msg msg) {
         String id = UUID.randomUUID().toString();
         msg.setId(id);
-
         return msgMapper.insertSelective(msg);
     }
 
     @Override
     public Msg selectMsgById(String id) {
+
         Example example = new Example(Msg.class);
         example.createCriteria().andEqualTo("id",id);
         List<Msg> list = msgMapper.selectByExample(example);
